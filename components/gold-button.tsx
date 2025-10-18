@@ -1,31 +1,31 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 
-interface GoldButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-  href?: string
-  className?: string
-  variant?: "primary" | "secondary"
-}
-
-export function GoldButton({ children, onClick, href, className = "", variant = "primary" }: GoldButtonProps) {
-  const baseClass =
-    variant === "primary"
-      ? "px-6 py-3 rounded-full border border-gold/20 text-white font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(222,157,35,0.4)] hover:border-gold/60 active:scale-95"
-      : "px-6 py-3 rounded-full border border-gold/40 text-gold font-semibold transition-all duration-300 hover:bg-gold/10 hover:border-gold/80"
-
-  if (href) {
+export function GoldButton({ children, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: string }) {
+  if (props.href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={`${baseClass} ${className} inline-block`}>
+      <a
+        href={props.href}
+        className={
+          "inline-block px-6 py-2 rounded-full bg-gold text-black font-bold shadow hover:bg-yellow-400 transition-all active:scale-95 text-center " +
+          (props.className || "")
+        }
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
       </a>
     )
   }
-
   return (
-    <button onClick={onClick} className={`${baseClass} ${className}`}>
+    <button
+      {...props}
+      className={
+        "px-6 py-2 rounded-full bg-gold text-black font-bold shadow hover:bg-yellow-400 transition-all active:scale-95 " +
+        (props.className || "")
+      }
+    >
       {children}
     </button>
   )

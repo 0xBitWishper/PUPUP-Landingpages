@@ -1,53 +1,32 @@
-export const TOKEN_SYMBOL = "PUP"
-export const TOTAL_SUPPLY = "1,000,000,000"
-export const TAX = "0%"
-export const LIQ_LOCKED = true
-export const OWNERSHIP_RENOUNCED = true
-
 export const LINKS = {
-  twitter: "https://twitter.com",
-  telegram: "https://telegram.org",
-  discord: "https://discord.com",
-  pumpsite: "https://pump.fun",
+  pumpfun: "https://pump.fun",
+  telegram: "https://t.me/pupupcoin",
+  x: "https://x.com/pupupcoin",
+  xCommunity: "https://x.com/i/communities/1234567890",
   dexscreener: "https://dexscreener.com",
-  solscan: "https://solscan.io",
-  docs: "https://docs.example.com",
-  leaderboard: "#leaderboard",
-  pumpfun: "https://pump.fun", // Added pumpfun link
-}
+  gmgn: "https://gmgn.app"
+};
+// lib/constants.ts
 
 export const ROADMAP_PHASES = [
   {
-    title: "Flush",
-    emoji: "🚽",
-    description: "Launch PUPUP token on Solana with community airdrop",
-  },
-  {
-    title: "Clean-Up",
-    emoji: "🧼",
-    description: "DEX listings and liquidity pools across major exchanges",
-  },
-  {
-    title: "Crown",
-    emoji: "👑",
-    description: "NFT collection launch with exclusive holder benefits",
-  },
-  {
-    title: "Empire",
-    emoji: "🏰",
-    description: "Mini-game release with leaderboard and rewards",
-  },
-  {
-    title: "Moon",
     emoji: "🚀",
-    description: "Metaverse integration and merchandise store",
+    title: "Phase 1: Launch",
+    description: "Website launch, community building, and initial meme coin distribution."
   },
-]
-
-export const NFT_COLLECTION = [
-  { name: "King", emoji: "👑" },
-  { name: "Flex", emoji: "💪" },
-  { name: "Billionaire", emoji: "💰" },
-  { name: "Samurai", emoji: "⚔️" },
-  { name: "Hacker", emoji: "🖥️" },
-]
+  {
+    emoji: "🎮",
+    title: "Phase 2: Game Release",
+    description: "Release of the PUPUP tap game and NFT gallery for the community."
+  },
+  {
+    emoji: "🤝",
+    title: "Phase 3: Partnerships",
+    description: "Collaborations with other meme projects and influencers."
+  },
+  {
+    emoji: "🌐",
+    title: "Phase 4: Expansion",
+    description: "Expanding the ecosystem, new features, and global marketing."
+  }
+];

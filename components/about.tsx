@@ -1,7 +1,7 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function About() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -59,13 +59,9 @@ export function About() {
               <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Pupup's Pledge:</h3>
               <ul className="space-y-2 text-sm md:text-base text-muted">
                 <li className="flex items-center gap-3">
-                  <span className="text-gold">→</span>
                   "I don't need rockets — I already have a throne." 🚽👑
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-gold">→</span>
-                  "Stay poopy. Stay rich." 💩💰
-                </li>
+                {/* Tambahkan pledge lain jika ada */}
               </ul>
             </div>
           </div>

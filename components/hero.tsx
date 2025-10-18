@@ -1,6 +1,5 @@
 "use client"
 
-
 import { useEffect, useState } from "react"
 import { GoldButton } from "./gold-button"
 import Image from "next/image"
@@ -35,7 +34,7 @@ export function Hero() {
   const scrollToBottom = () => {
     const startY = window.scrollY
     const endY = document.body.scrollHeight - window.innerHeight
-  const duration = 10000 // ms (ultra slow and smooth)
+    const duration = 10000 // ms (ultra slow and smooth)
     const startTime = performance.now()
     function animateScroll(currentTime: number) {
       const elapsed = currentTime - startTime
